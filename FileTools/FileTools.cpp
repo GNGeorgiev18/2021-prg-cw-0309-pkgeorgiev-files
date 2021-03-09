@@ -15,6 +15,5 @@ int main()
     {
         renameFile(fileName, "newExample.txt");
     }
-    //int result = deleteFile("example.txt");
 }
 

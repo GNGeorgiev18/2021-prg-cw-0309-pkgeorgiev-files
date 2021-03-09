@@ -60,3 +60,31 @@ int renameFile(std::string oldFileName, std::string newFileName)
 
 	return 0;
 }
+
+bool copyTextFile(std::string sourceFileName, std::string destinationFileName)
+{
+	ifstream inFile;
+	ofstream outFile;
+	bool result = false;
+
+	inFile.open(sourceFileName);
+	if (inFile.is_open())
+	{
+		string line;
+		outFile.open(destinationFileName, ios::out || ios::trunc);
+		if (outFile.is_open())
+		{
+			while (getline(inFile, line))
+			{
+				outFile << line << endl;
+			}
+
+			outFile.close();
+			result = true;
+		}
+
+		inFile.close();
+	}
+
+	return result;
+}
