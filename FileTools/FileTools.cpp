@@ -9,11 +9,6 @@ using namespace std;
 
 int main()
 {
-    string fileName = "example.txt";
-
-    if (createFile(fileName))
-    {
-        renameFile(fileName, "newExample.txt");
-    }
+    
 }
 

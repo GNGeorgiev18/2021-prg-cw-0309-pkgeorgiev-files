@@ -72,6 +72,7 @@ bool copyTextFile(std::string sourceFileName, std::string destinationFileName)
 	{
 		string line;
 		outFile.open(destinationFileName, ios::out || ios::trunc);
+		
 		if (outFile.is_open())
 		{
 			while (getline(inFile, line))
