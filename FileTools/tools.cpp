@@ -36,3 +36,27 @@ bool createFile(string fileName)
 
 	return false;
 }
+
+int deleteFile(std::string fileName)
+{
+	int result = remove(fileName.c_str());
+
+	if (result != 0)
+	{
+		return errno;
+	}
+
+	return 0;
+}
+
+int renameFile(std::string oldFileName, std::string newFileName)
+{
+	int result = rename(oldFileName.c_str(), newFileName.c_str());
+
+	if (result != 0)
+	{
+		return errno;
+	}
+
+	return 0;
+}
